@@ -29,14 +29,13 @@ mean_a0 = 1./sqrt(xi.^2+m^2);
 diff_mean_a0 = -xi./(xi.^2+m^2).^(3/2);
 
 % Lattice in complex plane (defines the region where we look for eigenvalues):
-h_res = 500;
+h_res = 200;
 bound = max(m, sqrt(abs(max(abs(V))^2-m^2)));
 z1 = -2.5 - 0.2i;
 z2 =  1 + 0.2i;
 [Ln,dist_L,adj] = build_lattice(z1, z2, h_res);
 
 %% Main loop:
-tic
 norms = zeros(size(Ln));
 parfor i=1:length(Ln(:))
     z = Ln(i);
@@ -48,7 +47,6 @@ parfor i=1:length(Ln(:))
         norms(i) = 1./norm(inv(eye(n+1) - K));
     end
 end
-toc
 
 % Find local minima on lattice:
 minima = islocalmin(abs(norms),1) & islocalmin(abs(norms),2);
@@ -66,7 +64,6 @@ parfor i=1:length(spectrum_coarse)
     z = spectrum_coarse(i);
     [z_end,ctr_gd] = GD(z,stepsize, maxiter, tol,n,m,I1,I2,J1,J2,xi,mean_a0,diff_mean_a0);
     spectrum(i) = z_end;
-    ctr_gd
 end
 spectrum
 
