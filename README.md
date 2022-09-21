@@ -6,4 +6,6 @@ This repository contains a MATLAB routine that computes the eigenvalues of the K
 * `simpson_integral.m`, `potential_integrals.m`: Technical functions that compute the matrix elements of the relevant operators via the Simpson's integral method;
 * `GD.m`: Computes the poles of $\\|(I-K(z))^{-1}\\|$ via standard gradient ascent.
 
+![a plot of the algorithm's output]([http://url/to/img.png](https://github.com/frank-roesler/spectral_klein_gordon/blob/main/output.png))
+
 Any comments or queries are welcome at https://frank-roesler.github.io/contact/
