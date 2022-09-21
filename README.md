@@ -4,6 +4,6 @@ This repository contains a MATLAB routine that computes the eigenvalues of the K
 * `potential.m`: Potential function;
 * `build_K.m`: Computes the matrix approximation to the function $K(z)$;
 * `simpson_integral.m`, `potential_integrals.m`: Technical functions that compute the matrix elements of the relevant operators via the Simpson's integral method;
-* `nesterov.m`: Computes the poles of $\\|(I-K(z))^{-1}\\|$ via Nesterov's method.
+* `GD.m`: Computes the poles of $\\|(I-K(z))^{-1}\\|$ via standard gradient ascent.
 
 Any comments or queries are welcome at https://frank-roesler.github.io/contact/
