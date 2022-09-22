@@ -3,7 +3,7 @@ This repository contains a MATLAB routine that computes the eigenvalues of the K
 * `main.m`: Main script that computes and plots the eigenvalues for a potential given in `potential.m`;
 * `potential.m`: Potential function;
 * `build_K.m`: Computes the matrix approximation to the function $K(z)$;
-* `simpson_integral.m`, `potential_integrals.m`: Technical functions that compute the matrix elements of the relevant operators via the Simpson's integral method;
+* `simpson_integral.m`, `potential_integrals.m`: Technical functions that compute the matrix elements of the relevant operators via Simpson's integral method;
 * `GD.m`: Computes the poles of $\\|(I-K(z))^{-1}\\|$ via standard gradient ascent.
 
 ![a plot of the algorithm's output](https://github.com/frank-roesler/spectral_klein_gordon/blob/main/output.png)
